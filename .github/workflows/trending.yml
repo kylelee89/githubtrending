@@ -1,0 +1,37 @@
+name: GitHub Trending Tracker
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # 매일 오전 9시 KST
+  workflow_dispatch:
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run tracker
+        env:
+          TELEGRAM_TOKEN: "8736525903:AAEod6IqdTlC-XzeJChbanYOAvbOBhVLz4U"
+          TELEGRAM_CHAT_ID: "98017929"
+        run: python tracker.py
+
+      - name: Commit state
+        run: |
+          git config user.email "trendbot@github.com"
+          git config user.name "Trend Bot"
+          git add previous_repos.json
+          git diff --staged --quiet || git commit -m "Update trending repos $(date +%Y-%m-%d)"
+          git push
