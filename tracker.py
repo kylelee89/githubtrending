@@ -74,7 +74,7 @@ else:
         f"TOP50 중 오늘 새로 들어온 {len(new_repos)}개\n"
     ]
 
-    for i, repo in enumerate(new_repos[:20], 1):
+    for i, repo in enumerate(new_repos[:50], 1):
         info = today_info.get(repo, {})
         name = repo.split("/")[1]
         stars = info.get("stargazers_count", 0)
