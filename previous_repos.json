@@ -6,7 +6,6 @@
   "google-labs-code/design.md",
   "browser-use/browser-harness",
   "h4ckf0r0day/obscura",
-  "KKKKhazix/khazix-skills",
   "browser-use/video-use",
   "nashsu/llm_wiki",
   "Robbyant/lingbot-map",
@@ -19,7 +18,6 @@
   "tw93/Kami",
   "YouMind-OpenLab/awesome-gpt-image-2",
   "AgriciDaniel/claude-obsidian",
-  "xixu-me/awesome-persona-distill-skills",
   "freestylefly/awesome-gpt-image-2",
   "momenbasel/PureMac",
   "EKKOLearnAI/hermes-web-ui",
@@ -48,5 +46,7 @@
   "openai/privacy-filter",
   "darrylmorley/whatcable",
   "leigest519/OpenGame",
-  "Nightmare-Eclipse/RedSun"
+  "Nightmare-Eclipse/RedSun",
+  "codejunkie99/agentic-stack",
+  "therealaleph/MasterHttpRelayVPN-RUST"
 ]
